@@ -1,2 +1,2 @@
 # Resume-Site
-A minimal personal resume website built with Astro and Tailwind CSS. Includes sections for About Me, Experiences, Contact, and Projects.
+This is a simple and responsive personal resume website built using Astro and Tailwind CSS. It includes sections for About Me, Experiences, Contact, and a placeholder for Projects (to be added soon). The goal is to keep the layout clean and focused on content.
