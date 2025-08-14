@@ -1,0 +1,36 @@
+---
+import ExperienceItem from '../components/icons/ExperienceItem.astro'
+const EXPERIENCE = [
+    {
+        date: "Septiembre 2024 - Julio 2025",
+        title: "Curatoría y Análisis de Datos",
+        company: "AkiDescuento",
+        description: "Obtención, revisión, corrección y validación de datos de la App. Elaboración de informes y visualización de datos estratégicos. Pruebas manuales."
+    },
+        {
+        date: "Diciembre 2023 - Abril 2024",
+        title: "Desarrollo FrontEnd",
+        company: "MiaApp",
+        description: "Desarrollo de una aplicación web para la gestión administrativa con React y ViteJs."
+    },
+        {
+        date: "Agosto 2023 - Noviembre 2023",
+        title: "Administrativa de Compras",
+        company: "Corporación Administrativa del Poder Judicial",
+        description: "Gestión de compras de pasajes aéreos para Ministros de la Corte Suprema y funcionarios de la CAPJ. Registro, análisis y visualización de datos de pasajes aéreos. Gestión de compras públicas en Mercado Público. "
+    },
+        {
+        date: "Enero 2023 - Marzo 2023",
+        title: "Práctica Profesional",
+        company: "Banco BICE",
+        description: "Desarrollo frontend con Angular. Desarrollo de microservicios con NodeJs y Express. Pruebas unitarias con SuperTest, MockAdapter y Sinon."
+    }
+]
+---
+<div class="mt-3 ml-3">
+  {EXPERIENCE.map((experience) => (
+    <ExperienceItem {...experience} />
+  ))}
+</div>
+
+

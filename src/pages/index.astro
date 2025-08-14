@@ -1,11 +1,75 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro'
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import GmailIcon from '../components/icons/Gmail.astro'
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from "../components/icons/Briefcase.astro"
+import photo from "../assets/photo.jpeg"
+import CodeIcon from "../components/icons/Code.astro"
+import Projects from "../components/Projects.astro"
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Portfolio de PsConstanza"
+	description="Ingeniera en Informática">
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			 <img
+				class="rounded-full size-12 mb-4" 
+				src= {photo.src}
+				alt="profile photo CPS"/>
+			<h3 class="text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6  lg:pb-10">
+				Constanza Piñones Silva
+					<Badge>
+						Santiago, Chile
+					</Badge>
+					<Badge>
+						Disponibilidad Inmediata
+					</Badge>
+					<Badge>
+						Modalidad Remoto o Híbrida
+					</Badge>
+			</h3>
+			<h4 class="text-2xl text-white text-wrap max-w-[800px] text-pretty">
+				<span>
+					Ingeniera en Gestión Logística e Informática.
+				</span>
+				<span class="text-blue-100/90">
+					Con experiencia en Desarrollo web, gestión de compras públicas y análisis/curatoría de datos. 
+				</span>
+			</h4>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/constanza-pinoness/">
+					<LinkedInIcon class="size-4 md:size-6" />
+						LinkedIn					
+				</SocialPill>
+				<SocialPill href="https://github.com/PsConstanza">
+					<GitHubIcon class="size-4 md:size-6" />
+						GitHub
+				</SocialPill>
+					<SocialPill href="mailto:constanza.pinonessilva@gmail.com">
+					<GmailIcon class="size-4 md:size-6" />
+						Gmail
+				</SocialPill>
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-3xl text-white font-semibold mt-4 mb-2 flex items-center gap-3">
+				<Briefcase class="size-7 flex gap-x-3 item-center"/> Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl text-white font-semibold mt-4 flex items-center gap-3">
+				<CodeIcon class="size-7 my-2"/>Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
 </Layout>
